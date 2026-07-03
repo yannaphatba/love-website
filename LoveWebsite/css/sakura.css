@@ -1,0 +1,169 @@
+/* ==========================================================
+   Sakura Animation
+   css/sakura.css
+========================================================== */
+/* Container ของดอกซากุระ */
+
+#sakura-container{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:-1;
+}
+
+/* กลีบซากุระแต่ละกลีบ */
+.sakura{
+    position:absolute;
+    left:0;
+    top:0;
+    user-select:none;
+    pointer-events:none;
+    will-change:transform;
+
+}
+
+/* รูปทรงของกลีบ */
+
+.sakura::before{
+    content:"🌸";
+    display:block;
+    font-size:var(--size);
+    opacity:var(--opacity);
+    filter:drop-shadow(0 0 3px rgba(255,255,255,.35));
+    animation:
+        sakuraRotate var(--rotateSpeed) linear infinite,
+        sakuraSwing var(--swingSpeed) ease-in-out infinite;
+}
+
+/* ==========================================================
+   กลีบร่วงลง
+========================================================== */
+
+@keyframes sakuraFall{
+    0%{
+        transform:
+        translate3d(0,-10vh,0);
+    }
+    100%{
+        transform:
+        translate3d(var(--drift),110vh,0);
+    }
+}
+
+/* ==========================================================
+   หมุน
+========================================================== */
+
+@keyframes sakuraRotate{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+/* ==========================================================
+   แกว่งซ้ายขวา
+========================================================== */
+
+@keyframes sakuraSwing{
+    0%{
+        transform:
+        translateX(0);
+    }
+    25%{
+        transform:
+        translateX(8px);
+    }
+    50%{
+        transform:
+        translateX(-8px);
+    }
+    75%{
+        transform:
+        translateX(6px);
+    }
+    100%{
+        transform:
+        translateX(0);
+    }
+}
+
+/* ==========================================================
+   ขนาดกลีบ
+========================================================== */
+
+.sakura.small{
+    --size:16px;
+}
+.sakura.medium{
+    --size:24px;
+}
+.sakura.large{
+    --size:34px;
+}
+
+/* ==========================================================
+   ความโปร่งใส
+========================================================== */
+
+.sakura.light{
+    --opacity:.45;
+}
+.sakura.normal{
+    --opacity:.7;
+}
+.sakura.bold{
+    --opacity:1;
+}
+
+/* ==========================================================
+   Blur เล็กน้อย
+========================================================== */
+
+.sakura.blur{
+    filter:blur(1.5px);
+}
+.sakura.blur2{
+    filter:blur(2.5px);
+}
+
+/* ==========================================================
+   Layer ความลึก
+========================================================== */
+
+.sakura.front{
+    z-index:5;
+}
+.sakura.middle{
+    z-index:2;
+}
+.sakura.back{
+    z-index:1;
+}
+
+/* ==========================================================
+   เพิ่มความนุ่มนวล
+========================================================== */
+
+.sakura{
+    transition:
+        transform .2s linear;
+}
+
+/* ==========================================================
+   ลดการเคลื่อนไหว (Accessibility)
+========================================================== */
+
+@media (prefers-reduced-motion: reduce){
+    .sakura{
+        animation:none;
+    }
+    .sakura::before{
+        animation:none;
+
+    }
+
+}

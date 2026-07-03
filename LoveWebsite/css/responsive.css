@@ -1,0 +1,283 @@
+/* ==========================================================
+   Responsive Design
+   css/responsive.css
+========================================================== */
+
+/* ===============================
+   Tablet (iPad / medium screen)
+   1024px and below
+=============================== */
+@media (max-width: 1024px) {
+    .main-card,
+    .success-card {
+        width: 85%;
+        padding: 40px 30px;
+        border-radius: 25px;
+    }
+
+    .title h1,
+    .success-card h1 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+
+    .title p {
+        font-size: 1.1rem;
+    }
+
+    #cat {
+        width: 140px;
+        height: auto;
+    }
+
+    #envelope {
+        font-size: 100px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
+
+/* ===============================
+   Mobile (iPhone / Android)
+   768px and below
+=============================== */
+@media (max-width: 768px) {
+    body {
+        overflow: auto;
+        padding: 10px;
+    }
+
+    .main-card,
+    .success-card {
+        width: 90%;
+        max-width: 500px;
+        padding: 30px 20px;
+        border-radius: 20px;
+        margin: 20px auto;
+    }
+
+    .title h1,
+    .success-card h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .title p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .button-area {
+        flex-direction: column;
+        gap: 12px;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    #yesButton,
+    #noButton {
+        position: relative;
+        width: 100%;
+        left: auto;
+        right: auto;
+        transform: none;
+        font-size: 16px;
+        padding: 14px 20px;
+    }
+
+    #musicButton {
+        width: 100%;
+        font-size: 15px;
+        padding: 12px 20px;
+        margin-top: 10px;
+    }
+
+    #cat {
+        width: 120px;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    #envelope {
+        font-size: 80px;
+    }
+
+    .letter {
+        padding: 20px;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .cat-area {
+        margin: 15px 0;
+    }
+}
+
+/* ===============================
+   Small Mobile (very small phones)
+   480px and below
+=============================== */
+@media (max-width: 480px) {
+    body {
+        overflow: auto;
+        padding: 5px;
+    }
+
+    .main-card,
+    .success-card {
+        width: 95%;
+        padding: 25px 15px;
+        border-radius: 18px;
+        margin: 15px auto;
+    }
+
+    .title h1,
+    .success-card h1 {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+
+    .title p {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .button-area {
+        flex-direction: column;
+        gap: 10px;
+        margin: 15px 0;
+    }
+
+    #yesButton,
+    #noButton {
+        font-size: 14px;
+        padding: 12px 15px;
+        width: 100%;
+    }
+
+    #musicButton {
+        width: 100%;
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+
+    #cat {
+        width: 100px;
+        height: auto;
+    }
+
+    #envelope {
+        font-size: 70px;
+    }
+
+    .letter {
+        padding: 15px;
+        font-size: 0.9rem;
+        line-height: 1.7;
+    }
+
+    .cat-area {
+        margin: 10px 0;
+    }
+}
+
+/* ===============================
+   Extra Small Mobile (very tiny phones)
+   360px and below
+=============================== */
+@media (max-width: 360px) {
+    .main-card,
+    .success-card {
+        width: 95%;
+        padding: 20px 12px;
+        border-radius: 16px;
+    }
+
+    .title h1,
+    .success-card h1 {
+        font-size: 1.2rem;
+    }
+
+    .title p {
+        font-size: 0.85rem;
+    }
+
+    #cat {
+        width: 90px;
+    }
+
+    #envelope {
+        font-size: 60px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+}
+
+/* ===============================
+   Landscape orientation
+=============================== */
+@media (max-height: 600px) and (orientation: landscape) {
+    body {
+        min-height: 100vh;
+        padding: 10px;
+    }
+
+    .main-card,
+    .success-card {
+        padding: 20px 25px;
+        margin: 10px auto;
+    }
+
+    .title h1,
+    .success-card h1 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+
+    .title p {
+        font-size: 0.9rem;
+    }
+
+    .button-area {
+        gap: 10px;
+    }
+
+    #cat {
+        width: 80px;
+    }
+}
+
+/* ===============================
+   Touch optimization
+=============================== */
+button,
+#envelope {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* ===============================
+   Safe area (iPhone notch)
+=============================== */
+body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+}
+
+/* ===============================
+   High DPI screens (Retina)
+=============================== */
+@media (min-device-pixel-ratio: 2) {
+    .main-card,
+    .success-card {
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+}

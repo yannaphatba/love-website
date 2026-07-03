@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>💖 เป็นแฟนกันไหม 💖</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sakura.css">
+    <link rel="stylesheet" href="css/hearts.css">
+    <link rel="stylesheet" href="css/sparkle.css">
+    <link rel="stylesheet" href="css/cat.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- เพลง -->
+        <audio id="bgMusic" loop>
+            <source src="music/love.mp3" type="audio/mpeg">
+        </audio>
+
+    <!-- ซากุระ -->
+    <div id="sakura-container"></div>
+
+    <!-- หัวใจ -->
+    <div id="heart-container"></div>
+
+    <!-- ประกาย -->
+    <div id="sparkle-container"></div>
+
+    <!-- พื้นหลัง -->
+    <div class="background"></div>
+
+    <!-- เนื้อหา -->
+    <main class="main-card">
+
+        <div class="title">
+
+            <h1>
+                💖 เป็นแฟนกันไหม 💖
+            </h1>
+
+            <p>
+
+                เค้าตั้งใจทำเว็บไซต์นี้เพื่อเธอเลยนะ ❤️
+
+            </p>
+
+        </div>
+
+        <!-- แมว -->
+        <div class="cat-area">
+
+            <img
+                src="images/cat.jpg"
+                alt="cat"
+                id="cat">
+
+        </div>
+
+        <!-- ปุ่ม -->
+
+        <div class="button-area">
+
+            <button id="yesButton">
+
+                ❤️ ตกลง
+
+            </button>
+
+            <button id="noButton">
+
+                🙈 ยกเลิก
+
+            </button>
+
+        </div>
+
+        <!-- เพลง -->
+
+        <button id="musicButton">
+
+            🎵 เปิดเพลง
+
+        </button>
+
+    </main>
+
+    <!-- Fireworks Canvas -->
+
+    <canvas id="sparkleCanvas"></canvas>
+
+    <!-- JavaScript (Load at end for proper DOM access) -->
+
+    <script src="js/music.js"></script>
+    <script src="js/sakura.js"></script>
+    <script src="js/hearts.js"></script>
+    <script src="js/sparkle.js"></script>
+    <script src="js/cat.js"></script>
+    <script src="js/envelope.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

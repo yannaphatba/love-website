@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>❤️ คุณแฟน ❤️</title>
+
+    <!-- Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;500;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/sakura.css">
+    <link rel="stylesheet" href="css/hearts.css">
+    <link rel="stylesheet" href="css/sparkle.css">
+    <link rel="stylesheet" href="css/envelope.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- เพลง -->
+
+        <audio id="bgMusic" loop>
+            <source src="music/love.mp3" type="audio/mpeg">
+        </audio>
+
+    <!-- ซากุระ -->
+
+    <div id="sakura-container"></div>
+
+    <!-- หัวใจ -->
+
+    <div id="heart-container"></div>
+
+    <!-- ประกาย -->
+
+    <div id="sparkle-container"></div>
+
+    <!-- เนื้อหา -->
+
+    <main class="success-card">
+
+        <h1>
+
+            ❤️ เค้ารักเธอน่าาา ❤️
+
+        </h1>
+
+        <h2>
+
+            คุณแฟน 😊
+
+        </h2>
+
+        <!-- ซองจดหมาย -->
+
+        <div class="envelope-container">
+
+            <div id="envelope">
+
+                📩
+
+            </div>
+
+            <p>
+
+                กดซองจดหมายเพื่อเปิดนะ ❤️
+
+            </p>
+
+        </div>
+
+        <!-- จดหมาย -->
+
+        <div
+            class="letter hidden"
+            id="letter">
+
+            <h2>
+
+                ถึงคุณแฟน ❤️
+
+            </h2>
+
+            <p>
+
+                ขอบคุณที่กด "ตกลง"
+
+                <br><br>
+
+                เค้าดีใจมาก ๆ ที่เธอเข้ามาในชีวิต
+
+                <br><br>
+
+                หลังจากนี้...
+
+                <br><br>
+
+                ขอให้เค้าได้ดูแลเธอ
+
+                ได้อยู่ข้าง ๆ เธอ
+
+                และทำให้เธอยิ้มได้ทุกวัน
+
+                <br><br>
+
+                ❤️
+
+                เค้ารักเธอนะ
+
+                ❤️
+
+            </p>
+
+        </div>
+
+    </main>
+
+    <!-- Fireworks -->
+
+    <canvas id="sparkleCanvas"></canvas>
+
+    <!-- JavaScript (Load at end for proper DOM access) -->
+
+    <script src="js/music.js"></script>
+    <script src="js/sakura.js"></script>
+    <script src="js/hearts.js"></script>
+    <script src="js/sparkle.js"></script>
+    <script src="js/envelope.js"></script>
+
+</body>
+
+</html>
