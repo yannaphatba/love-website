@@ -1,0 +1,163 @@
+/* ==========================================================
+   Envelope
+========================================================== */
+
+.envelope-container{
+
+    margin:30px 0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    width:100%;
+
+}
+
+.envelope-container p{
+
+    margin-top:15px;
+
+    color:#555;
+
+    font-size:1rem;
+
+}
+
+/* ========================================================== */
+
+#envelope{
+
+    font-size:120px;
+
+    cursor:pointer;
+
+    transition:
+
+        transform .4s ease,
+
+        filter .4s ease;
+
+    user-select:none;
+
+}
+
+#envelope:hover{
+
+    transform:
+
+        scale(1.12)
+
+        rotate(-5deg);
+
+    filter:
+
+        drop-shadow(0 0 20px pink);
+
+}
+
+/* ========================================================== */
+
+#envelope.open{
+
+    animation:
+
+        envelopeOpen .8s forwards;
+
+}
+
+@keyframes envelopeOpen{
+
+    0%{
+
+        transform:
+
+            scale(1)
+
+            rotate(0deg);
+
+    }
+
+    50%{
+
+        transform:
+
+            scale(1.2)
+
+            rotate(8deg);
+
+    }
+
+    100%{
+
+        transform:
+
+            scale(.85);
+
+        opacity:.15;
+
+    }
+
+}
+
+/* ========================================================== */
+
+.letter{
+
+    margin-top:30px;
+
+    max-width:650px;
+
+    background:white;
+
+    color:#555;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    box-shadow:
+
+        0 10px 25px rgba(0,0,0,.18);
+
+    line-height:2;
+
+    opacity:0;
+
+    transform:
+
+        translateY(50px);
+
+    transition:
+
+        .8s;
+
+}
+
+.letter.show{
+
+    opacity:1;
+
+    transform:
+
+        translateY(0);
+
+}
+
+.letter h2{
+
+    color:#ff4f8b;
+
+    margin-bottom:20px;
+
+}
+
+.hidden{
+
+    display:none;
+
+}

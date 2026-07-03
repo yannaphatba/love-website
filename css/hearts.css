@@ -1,0 +1,90 @@
+/* ==========================================================
+   Floating Hearts
+   css/hearts.css
+========================================================== */
+
+#heart-container{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:2;
+
+}
+
+/* ========================================================== */
+
+.heart{
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    user-select:none;
+
+    pointer-events:none;
+
+    will-change:transform;
+
+    filter:drop-shadow(0 0 6px rgba(255,120,170,.45));
+
+}
+
+/* ========================================================== */
+
+.heart.front{
+
+    z-index:5;
+
+}
+
+.heart.middle{
+
+    z-index:3;
+
+}
+
+.heart.back{
+
+    z-index:1;
+
+}
+
+/* ========================================================== */
+
+.heart.small{
+
+    font-size:18px;
+
+}
+
+.heart.medium{
+
+    font-size:26px;
+
+}
+
+.heart.large{
+
+    font-size:38px;
+
+}
+
+/* ========================================================== */
+
+@media (prefers-reduced-motion:reduce){
+
+    .heart{
+
+        display:none;
+
+    }
+
+}
